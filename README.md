@@ -1,10 +1,10 @@
 ## lurq
 
-> open-source simulation engine, simulating what happens when you change a policy, tariff or regulation.
+open-source simulation engine, simulating what happens when you change a policy, tariff or regulation.
 
 **Status:** v0 in active development, star to follow!
 
-##Quickstart
+## Quickstart
 
 ​```python
 import lurq
