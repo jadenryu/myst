@@ -9,21 +9,14 @@ authors = [
     { name = "Jaden Ryu" }
 ]
 dependencies = [
-    "networkx>=3.2",
-    "dowhy>=0.11",
-    "anthropic>=0.40",
     "pydantic>=2.5",
-    "pandas>=2.1",
-    "numpy>=1.26",
-    "matplotlib>=3.8",
-    "scipy>=1.11",
+    "pyyaml>=6.0",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest>=7.4",
     "ruff>=0.1",
-    "ipykernel>=6.27",
 ]
 
 [build-system]

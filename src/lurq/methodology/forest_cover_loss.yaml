@@ -1,0 +1,24 @@
+methodology_space: forest_cover_loss
+version: 0.0.0-stub
+description: >
+  Structural stub for testing the methodology-space loader.
+  Replace with the curated v1.0.0 artifact before real use.
+
+axes:
+  - id: satellite_product
+    description: Source dataset for forest cover and loss measurement.
+    options:
+      - value: hansen_gfc
+        label: Hansen Global Forest Change
+        citation: "PLACEHOLDER - verify and replace"
+      - value: jrc_tmf
+        label: JRC Tropical Moist Forest
+        citation: "PLACEHOLDER - verify and replace"
+
+  - id: canopy_cover_threshold_pct
+    description: Minimum canopy cover for a pixel to count as forest.
+    options:
+      - value: 10
+        citation: "PLACEHOLDER - verify and replace"
+      - value: 30
+        citation: "PLACEHOLDER - verify and replace"
