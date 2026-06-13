@@ -8,7 +8,8 @@
       "Bash(conda --version)",
       "Bash(uv --version)",
       "Bash(pip show *)",
-      "Bash(python -c \"import lurq\")"
+      "Bash(python -c \"import lurq\")",
+      "Bash(pytest *)"
     ]
   }
 }

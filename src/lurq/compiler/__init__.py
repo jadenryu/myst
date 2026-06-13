@@ -6,7 +6,7 @@ __all__ = [
     "AxisAssignment",
     "Extractor",
     "ManualExtractor",
-    "PipelineSpec",
-    "ProposedPin",
+    "PipelineSpecs",
+    "ProposedPins",
     "compile_claim",
 ]
