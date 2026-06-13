@@ -30,10 +30,10 @@ def test_compile_pin():
 
     extractor = ManualExtractor(
         pins = {"satellite_product": first_product}, 
-        source_evidence = {"satelllite_product": "stated in source"}
+        source_evidence = {"satellite_product": "stated in source"}
     )
     spec = compile_claim(make_claim(), space, extractor)
-    a = spec.assignments("satellite_product")
+    a = spec.check_assignments("satellite_product")
 
     assert a.status == "pinned"
     assert a.values == [first_product]
@@ -41,7 +41,7 @@ def test_compile_pin():
 
 def test_compile_invalid_pin():
     space = MethodologySpace.from_yaml(SPACE_PATH)
-    extractor = ManualExtractor(pins = {"satellite_product": "random"}, source_evidence = "random")
+    extractor = ManualExtractor(pins = {"satellite_product": "random"})
     spec = compile_claim(make_claim(), space, extractor)
 
     a = spec.check_assignments("satellite_product")

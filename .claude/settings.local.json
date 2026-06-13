@@ -9,7 +9,9 @@
       "Bash(uv --version)",
       "Bash(pip show *)",
       "Bash(python -c \"import lurq\")",
-      "Bash(pytest *)"
+      "Bash(pytest *)",
+      "Bash(git rebase *)",
+      "Bash(git stash *)"
     ]
   }
 }
