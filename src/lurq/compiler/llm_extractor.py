@@ -77,6 +77,27 @@ class LLMExtractor:
     @staticmethod
     def _parse(content: str) -> list[ProposedPins]:
         text = content.strip()
+        if text.startswith("```")
+            text = text.split("```")[1] if "```" in text[3:] else text.strip("`")
+            text = text.removeprefix("json").strip()
+        try:
+            parsed = json.loads(text)
+            pins = parsed.get("pins", [])
+        except (json.JSONDecodeError, AttributeError):
+            return []
+        result = []
+        for p in pins:
+            try: 
+                result.append(
+                    ProposedPins(
+                        axis_id = p["axis_id"],
+                        value = p["value"],
+                        source_evidence = p.get("source_evidence")
+                    )
+                )
+            except (KeyError, TypeError):
+                continue
+        return result
 
 
 
