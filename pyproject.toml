@@ -1,7 +1,7 @@
 [project]
 name = "lurq"
-version = "0.0.1"
-description = "Open-source simulation engine for high-stakes decisions"
+version = "0.0.2"
+description = "Open-source simulation engine for environmental claims"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "Apache-2.0"
@@ -11,6 +11,7 @@ authors = [
 dependencies = [
     "pydantic>=2.5",
     "pyyaml>=6.0",
+    "httpx>=0.27"
 ]
 
 [project.optional-dependencies]

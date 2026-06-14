@@ -11,7 +11,22 @@
       "Bash(python -c \"import lurq\")",
       "Bash(pytest *)",
       "Bash(git rebase *)",
-      "Bash(git stash *)"
+      "Bash(git stash *)",
+      "Skill(deep-research)",
+      "Workflow(deep-research)",
+      "WebSearch",
+      "WebFetch(domain:formation.dev)",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36\" \"https://www.cnbc.com/2025/08/28/generative-ai-reshapes-us-job-market-stanford-study-shows-entry-level-young-workers.html\")",
+      "Bash(python3 -c \"import sys,re,html; t=sys.stdin.read\\(\\); t=re.sub\\(r'<script.*?</script>','',t,flags=re.S\\); t=re.sub\\(r'<style.*?</style>','',t,flags=re.S\\); t=re.sub\\(r'<[^>]+>',' ',t\\); t=html.unescape\\(t\\); t=re.sub\\(r'\\\\s+',' ',t\\); print\\(t[:8000]\\)\")",
+      "Read(//private/tmp/**)",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"http://web.archive.org/web/20260516125346id_/https://www.bls.gov/news.release/ecopro.htm\" -o eco.html -w \"HTTP %{http_code} size %{size_download}\\\\n\")",
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:newsletter.pragmaticengineer.com)",
+      "Bash(command -v pdftotext)",
+      "Bash(pdftotext /Users/jadenryu/.claude/projects/-Users-jadenryu-Desktop-lurq/7f6c7aa1-47b5-4305-a4ac-f1434a55db35/tool-results/webfetch-1781395958405-g6v053.pdf /tmp/paper.txt)",
+      "Read(//tmp/**)",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)\" \"https://moneywise.com/news/top-stories/big-tech-layoffs-ai-washing-overhiring\" -o /tmp/mw2.html -w \"STATUS:%{http_code}\\\\n\")",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://r.jina.ai/https://moneywise.com/news/top-stories/big-tech-layoffs-ai-washing-overhiring\" -o /tmp/mw3.txt -w \"STATUS:%{http_code}\\\\n\")"
     ]
   }
 }
