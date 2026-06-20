@@ -1,6 +1,6 @@
 <div align="center">
 
-# lurq
+# myst
 
 ### Open-source claim verification
 
@@ -8,15 +8,15 @@
 
 ---
 
-## What is lurq?
+## What is myst?
 
-**lurq cross-validates environmental-based claims with pinpoint accuracy using a reverse-engineered methodology process** 
+**myst cross-validates environmental-based claims with pinpoint accuracy using a reverse-engineered methodology process** 
 
 
 ## Quickstart
 
 ```python
-from lurq.claim import Claim
+from myst.claim import Claim
 
 claim = Claim(
     raw_text: str
@@ -37,11 +37,11 @@ print(result.summary())
 
 ```bash
 # From PyPI (once published)
-pip install lurq
+pip install myst
 
 # From source
-git clone https://github.com/jadenryu/lurq.git
-cd lurq
+git clone https://github.com/jadenryu/myst.git
+cd myst
 pip install -e ".[dev]"
 ```
 
@@ -51,7 +51,7 @@ Requires Python 3.11+
 
 ## Contributing
 
-lurq is pre-alpha. 
+myst is pre-alpha. 
 
 Open an issue or reach out on Gmail @ jadenryu@gmail.com!
 
