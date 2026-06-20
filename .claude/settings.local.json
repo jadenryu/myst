@@ -8,7 +8,7 @@
       "Bash(conda --version)",
       "Bash(uv --version)",
       "Bash(pip show *)",
-      "Bash(python -c \"import lurq\")",
+      "Bash(python -c \"import myst\")",
       "Bash(pytest *)",
       "Bash(git rebase *)",
       "Bash(git stash *)",
@@ -26,7 +26,15 @@
       "Bash(pdftotext /Users/jadenryu/.claude/projects/-Users-jadenryu-Desktop-lurq/7f6c7aa1-47b5-4305-a4ac-f1434a55db35/tool-results/webfetch-1781395958405-g6v053.pdf /tmp/paper.txt)",
       "Read(//tmp/**)",
       "Bash(curl -sL -A \"Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)\" \"https://moneywise.com/news/top-stories/big-tech-layoffs-ai-washing-overhiring\" -o /tmp/mw2.html -w \"STATUS:%{http_code}\\\\n\")",
-      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://r.jina.ai/https://moneywise.com/news/top-stories/big-tech-layoffs-ai-washing-overhiring\" -o /tmp/mw3.txt -w \"STATUS:%{http_code}\\\\n\")"
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://r.jina.ai/https://moneywise.com/news/top-stories/big-tech-layoffs-ai-washing-overhiring\" -o /tmp/mw3.txt -w \"STATUS:%{http_code}\\\\n\")",
+      "Bash(python -c \"import sys; print\\(sys.version\\)\")",
+      "Bash(python -m pytest -q)",
+      "Bash(.venv/bin/python -m pip install -q -e \".[dev]\")",
+      "Bash(.venv/bin/python -m pytest -q)",
+      "Bash(python3 -m pytest --version)",
+      "Bash(.venv/bin/python -c \"import pydantic, httpx, yaml; print\\('deps ok'\\)\")",
+      "Bash(uv run *)",
+      "Bash(git mv *)"
     ]
   }
 }

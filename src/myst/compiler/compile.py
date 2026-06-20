@@ -4,10 +4,10 @@ are gridded rather than pinned. pinned axes must have source evidence and must c
 from datetime import datetime, timezone
 from pydantic import BaseModel
 
-from lurq.claim import Claim
-from lurq.compiler.extractor import Extractor, ProposedPins
-from lurq.compiler.specs import AxisAssignment, PipelineSpecs
-from lurq.methodology import MethodologySpace
+from myst.claim import Claim
+from myst.compiler.extractor import Extractor, ProposedPins
+from myst.compiler.specs import AxisAssignment, PipelineSpecs
+from myst.methodology import MethodologySpace
 
 def compile_claim(claim: Claim, methodology_space: MethodologySpace, extractor: Extractor) -> PipelineSpecs:
     proposed_pins: dict[str, ProposedPins] = {

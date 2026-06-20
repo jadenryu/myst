@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import Protocol
-from lurq.claim import Claim
-from lurq.methodology import MethodologySpace
+from myst.claim import Claim
+from myst.methodology import MethodologySpace
 
 class ProposedPins(BaseModel):
     axis_id: str

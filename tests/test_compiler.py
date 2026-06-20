@@ -3,12 +3,12 @@ from pathlib import Path
 import pytest 
 from pydantic import ValidationError
 
-from lurq import AxisAssignment, Claim, compile_claim, Extractor, ManualExtractor, MethodologySpace
+from myst import AxisAssignment, Claim, compile_claim, Extractor, ManualExtractor, MethodologySpace
 
 
 SPACE_PATH = (
     Path(__file__).parent.parent
-    / "src/lurq/methodology/forest_cover_loss.yaml"
+    / "src/myst/methodology/forest_cover_loss.yaml"
 )
 
 def make_claim() -> Claim:

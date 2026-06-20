@@ -2,11 +2,11 @@ from pathlib import Path
 import pytest
 from pydantic import ValidationError
 
-from lurq import AxisOption, MethodologySpace
+from myst import AxisOption, MethodologySpace
 
 STUB_PATH = (
     Path(__file__).parent.parent
-    / "src/lurq/methodology/forest_cover_loss.yaml"
+    / "src/myst/methodology/forest_cover_loss.yaml"
 )
 
 def test_loads_from_yaml():

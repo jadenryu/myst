@@ -3,9 +3,9 @@ import os
 
 import httpx
 
-from lurq.claim import Claim
-from lurq.methodology import MethodologySpace
-from lurq.compiler.extractor import ProposedPins
+from myst.claim import Claim
+from myst.methodology import MethodologySpace
+from myst.compiler.extractor import ProposedPins
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -30,7 +30,7 @@ Hard rules:
 """
 
 class LLMExtractor: 
-    def __init__(self, api_key = API_KEY, model = DEFAULT_MODEL, base_url = DEFAULT_BASE_URL, client = httpx.Client):
+    def __init__(self, api_key = API_KEY, model = DEFAULT_MODEL, base_url = DEFAULT_BASE_URL, client = None):
         self.api_key = api_key
         self.model = model
         self.base_url = base_url
@@ -38,7 +38,7 @@ class LLMExtractor:
         self.id = f"llm:{model}"
     
     def _post(self, payload: dict) -> dict:
-        client = self.client or httpx.Client(timeout = 60)
+        client = self._client or httpx.Client(timeout = 60)
         try:
             resp = client.post(
                 f"{self.base_url}/chat/completions",
@@ -54,13 +54,13 @@ class LLMExtractor:
     def _build_axis_brief(self, methodology_space: MethodologySpace) -> str:
         lines = []
         for axis in methodology_space.axes: 
-            allowed = " .".join(str(v) for v in axis.option_values())
+            allowed = ", ".join(str(v) for v in axis.option_values())
             lines.append(f"{axis.id}: {axis.description} -- allowed: {allowed}")
         return "\n".join(lines)
     def extract(self, claim: Claim, methodology_space: MethodologySpace) -> list[ProposedPins]:
         user_msg = (
             f"Claim: \n{claim.raw_text}\n\n"
-            f"Axes: \n{self.build_axis_brief(methodology_space)}"
+            f"Axes: \n{self._build_axis_brief(methodology_space)}"
         )
         payload = {
             "model": self.model,
@@ -77,7 +77,7 @@ class LLMExtractor:
     @staticmethod
     def _parse(content: str) -> list[ProposedPins]:
         text = content.strip()
-        if text.startswith("```")
+        if text.startswith("```"):
             text = text.split("```")[1] if "```" in text[3:] else text.strip("`")
             text = text.removeprefix("json").strip()
         try:

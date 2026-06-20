@@ -3,7 +3,7 @@ from typing import Literal
 
 from pydantic import BaseModel, model_validator
 
-from lurq.claim import Claim
+from myst.claim import Claim
 
 class AxisAssignment(BaseModel):
     axis_id: str
